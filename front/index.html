@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Vjavier URL shortner</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+    <link rel="stylesheet" href="//getbootstrap.com/examples/cover/cover.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="main.css" />
+
+</head>
+<body>
+
+<div class="site-wrapper">
+    <div class="site-wrapper-inner">
+        <div class="cover-container">
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand">URL Shortner</h3>
+                    <nav>
+                        <ul class="nav masthead-nav">
+                            <li class="active"><a href="#" data-show="shortener">Home</a></li>
+                            <li><a href="#" data-show="shortnen-list">List</a></li>
+                            <li><a href="#">Stats</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="inner cover shortener active">
+                <h1 class="cover-heading">Enter your url.</h1>
+                <form>
+                    <div class="form-group">
+                        <input type="url" class="form-control" id="url-to-short" placeholder="Ex. http://google.com" required="required">
+                    </div>
+                </form>
+                <p class="lead">
+                    <a href="#" class="btn btn-lg btn-default short-url" target="_blank">Shorten</a>
+                </p>
+
+                <p class="lead short-url-response">
+                    <a href=""></a>
+                </p>
+            </div>
+            <div class="inner cover shortnen-list">
+                <h1 class="cover-heading">Shorten URL.</h1>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Full URL</th>
+                        <th>Shorten URL</th>
+                        <th>Times used</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="mastfoot">
+                <div class="inner">
+                    <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jsrender/0.9.71/jsrender.min.js"></script>
+
+<script src="main.js"></script>
+
+<script id="shortrow" type="text/x-jsrender">
+    <tr><td>{{:full_url}}</td><td>{{:shorten}}</td><td>{{:usage}}</td></tr>
+</script>
+
+
+</body>
+</html>

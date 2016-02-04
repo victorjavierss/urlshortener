@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <link rel="dns-prefetch" href="//cf.c.ooyala.com">
+
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="{{ YOUR_CLIENT_ID }}">
+
+    <title>{{ APPLICATION_NAME }}</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+    <script src="https://apis.google.com/js/platform.js"></script>
+</head>
+<body {% block bodyclass %}{% endblock %}>
+
+<nav role="navigation">
+    <div class="nav-wrapper container">
+        <img src="images/2015.07.28-header-hackathon-no-auth.png" />
+    </div>
+</nav>
+
+{% block content %}{% endblock %}
+
+</body>
+
+<!-- JavaScript specific to this application that is not related to API calls -->
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/mousetrap.min.js"></script>
+<script src="js/materialize.min.js"></script>
+
+{% block customJS %}{% endblock %}
+
+<script type="text/javascript">
+
+
+    window['baseURL'] = '{{ BASEURL }}';
+
+</script>
+
+</html>
